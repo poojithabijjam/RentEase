@@ -1,0 +1,75 @@
+<html>
+    <head>
+            <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>  
+            <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+            <script>
+                var firebaseConfig = {
+                            apiKey: "AIzaSyByYiKYnOPzfBmnqyV6GJkm8195W18RDnE",
+                            authDomain: "rentalapp-9000a.firebaseapp.com",
+                            databaseURL: "https://rentalapp-9000a.firebaseio.com",
+                            projectId: "rentalapp-9000a",
+                            storageBucket: "",
+                            messagingSenderId: "1046705702543",
+                            appId: "1:1046705702543:web:04df2846056cc0dd"
+                        };
+                        // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            </script>
+            <link rel="stylesheet" type="text/css" href="css/Form.css">
+            <link rel="stylesheet" type="text/css" href="style1.css">
+            
+            <style>
+                   body{
+    /* background:lightseagreen; */
+    height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+     background-image: url("back.jpg"); 
+    background-repeat: no-repeat; 
+}
+                    </style>
+
+    </head>
+    <body>
+            <center>
+            <h1>EDIT TENANT</h1>
+            <div class="container">
+                    <!-- <div id="google_translate_element"></div> -->
+       <!-- <h3>Tenant Name:<input type = "text" id= "tName"><br><br><br>
+        Phone no:<input type ="number" id= "phno"><br><br><br>
+        Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type ="email" id= "email"><br><br><br>
+        Arrival Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type ="date" id= "date"><br><br><br>
+    </h3> -->
+    <table cellpadding="25">
+            <tr><td><h3>Tenant Name:</h3></td><td><input type = "text" id= "tName"></td></tr>
+        <tr><td><h3>Phone Num:</h3></td> <td><input type ="number" id= "phno"></td> </tr>
+        <tr><td><h3>Email Id:</h3></td> <td><input type ="email" id= "email"></td> </tr>
+    <tr> <td><h3>Arrival Date:</h3></td> <td><input type ="date" id= "date"></td></tr>
+    </h3>
+</table>
+
+
+        <br>
+        <input type="button"  onclick="editTenant()" value ="Fetch" id = "ebtn">&nbsp;
+        <input type="button"  onclick="updateTenant()" value ="Update" id = "ubtn">&nbsp;
+        <input type="button"  onclick="deleteTenant()" value ="Remove" id = "dbtn">&nbsp;
+        <input type="button"  onclick="back()" value ="Back" id = "bbtn">
+
+
+        <script src= "js/firebaseRent.js"></script>
+        <script type="text/javascript"> 
+            function googleTranslateElementInit() { 
+              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element'); 
+            } 
+            </script> 
+              
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+        </center>
+            </div>
+
+    </body>
+</html>

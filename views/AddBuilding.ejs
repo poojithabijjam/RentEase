@@ -1,0 +1,62 @@
+<html>
+    <head>
+            <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>  
+            <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+            <script>
+                var firebaseConfig = {
+    apiKey: "AIzaSyByYiKYnOPzfBmnqyV6GJkm8195W18RDnE",
+    authDomain: "rentalapp-9000a.firebaseapp.com",
+    databaseURL: "https://rentalapp-9000a.firebaseio.com",
+    projectId: "rentalapp-9000a",
+    storageBucket: "",
+    messagingSenderId: "1046705702543",
+    appId: "1:1046705702543:web:04df2846056cc0dd"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+            </script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/Form.css">
+<style>
+       body{
+    /* background:lightseagreen; */
+    height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+     background-image: url("back.jpg"); 
+    background-repeat: no-repeat; 
+}
+        </style>
+
+
+    </head>
+    <body><center>
+        <h1>ADD FLATS</h1>
+            <div class="container">
+
+                    <table cellpadding="25">
+                            <tr><td><h3>Flat No:</h3></td><td><input type ="number" id= "flatno"></td></tr>
+                        <tr><td><h3>Floor No:</h3></td> <td><input type ="number" id= "floorno"></td> </tr>
+                        
+                    <tr> <td><h3>Tenant Name:</h3></td> <td><input type ="text" id= "tname"></td></tr>
+                    </h3>
+                </table>
+            
+        <!-- TenantName:<input type = "text" id= "tName"><br><br> -->
+        <!-- FlatNo:<input type ="number" id= "flatno"><br><br><br><br><br><br>
+        FloorNo:<input type ="number" id= "floorno"><br><br><br><br><br><br>
+        TenantName:<input type ="text" id= "tname"><br><br><br><br><br><br><br>
+         -->
+        <input type="button" onclick="addFlat()" value ="AddFlat">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button"  onclick="back()" value ="Back" id = "bbtn">
+
+    </div>
+</center>
+            <script src= "js/firebaseRent.js"></script>
+    </body>
+</html>

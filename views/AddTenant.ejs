@@ -1,0 +1,55 @@
+<html>
+    <head>
+            <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>  
+            <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+            <script>
+                var firebaseConfig = {
+    apiKey: "AIzaSyByYiKYnOPzfBmnqyV6GJkm8195W18RDnE",
+    authDomain: "rentalapp-9000a.firebaseapp.com",
+    databaseURL: "https://rentalapp-9000a.firebaseio.com",
+    projectId: "rentalapp-9000a",
+    storageBucket: "",
+    messagingSenderId: "1046705702543",
+    appId: "1:1046705702543:web:04df2846056cc0dd"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+            </script>
+
+<link rel="stylesheet" type="text/css" href="css/Form.css">
+<style>
+body{
+    /* background:lightseagreen; */
+    height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+     background-image: url("back.jpg"); 
+    background-repeat: no-repeat; 
+}
+</style>
+    </head>
+    <body><center>
+        <form>
+        <h1>ADD TENANT</h1>
+            <div class="container">
+                <table cellpadding="25">
+            <tr><td><h3>Tenant Name:</h3></td><td><input type = "text" id= "tName"></td></tr>
+        <tr><td><h3>Phone Num:</h3></td> <td><input type ="number" id= "phno"></td> </tr>
+        <tr><td><h3>Email Id:</h3></td> <td><input type ="email" id= "email"></td> </tr>
+    <tr> <td><h3>Arrival Date:</h3></td> <td><input type ="date" id= "date"></td></tr>
+    </h3>
+</table>
+        <br>
+        <input type="button" onclick="addTenant()" value ="AddName">&nbsp;&nbsp;&nbsp;
+        <input type="button"  onclick="back()" value ="Back" id = "bbtn">
+    </form>
+
+    </center>
+            <script src= "js/firebaseRent.js"></script>
+            </div>
+    </body>
+</html>
