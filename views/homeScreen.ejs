@@ -19,7 +19,13 @@ appId: "1:1046705702543:web:04df2846056cc0dd"
 firebase.initializeApp(firebaseConfig);
     </script>
 <style>
-body {margin:0;}
+body {margin:0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+     background-image: url("back.jpg"); 
+    background-repeat: no-repeat; 
+    }
 
 ul {
   list-style-type: none;
@@ -58,8 +64,7 @@ li a:hover:not(.active) {
       var div = $("div");  
       div.animate({left: '200px'}, "slow");
       div.animate({height: "600px"});
-      div.animate({textIndent: "30px"})
-
+      div.animate({textIndent: "100px"});
       div.animate({fontSize: '4em'}, "slow");
     });
   </script> 
@@ -76,11 +81,9 @@ li a:hover:not(.active) {
   <li><a href="/EditTenant">Edit Tenant</a></li>
   <li><a href="/chat">chat</a></li>
 
-
- 
 </ul>
  
-<div style="padding:20px;margin-top:30px;background-color:#1abc9c;">
+<div>
   <div>Vermieten</div>
 <!-- <img src= "Home.jpg" width="1300" height="600"> -->
    

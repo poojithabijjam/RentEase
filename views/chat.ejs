@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Group Chat on Node.js</title>
+    <!-- <title>Simple Group Chat on Node.js</title> -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font: 13px Helvetica, Arial; }
@@ -18,7 +18,7 @@
   <body>
     <ul id="messages"></ul>
     <form action="/" method="POST" id="chatForm">
-      <input id="txt" autocomplete="off" autofocus="on" oninput="isTyping()" placeholder="type your message here..." /><button>Send</button>
+      <input id="txt" autocomplete="off" autofocus="on" oninput="isTyping()" placeholder="type your message here..." /><button onclick="saveMessage()"Send</button>
     </form>
     <script>
             var socket = io.connect('https://vermieten.herokuapp.com');
@@ -31,6 +31,7 @@
             });
             // append the chat text message
             socket.on('chat_message', function(msg){
+
               
                 $('#messages').append($('<li>').html(msg));
 
@@ -43,5 +44,6 @@
             var username = prompt('Please tell me your name');
             socket.emit('username', username);
     </script>
+    <script src= "js/firebaseRent.js"></script>
   </body>
 </html>
