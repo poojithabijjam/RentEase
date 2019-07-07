@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>  
+      <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+      <script>
+          var firebaseConfig = {
+apiKey: "AIzaSyByYiKYnOPzfBmnqyV6GJkm8195W18RDnE",
+authDomain: "rentalapp-9000a.firebaseapp.com",
+databaseURL: "https://rentalapp-9000a.firebaseio.com",
+projectId: "rentalapp-9000a",
+storageBucket: "",
+messagingSenderId: "1046705702543",
+appId: "1:1046705702543:web:04df2846056cc0dd"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+      </script>
     <!-- <title>Simple Group Chat on Node.js</title> -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -18,7 +34,8 @@
   <body>
     <ul id="messages"></ul>
     <form action="/" method="POST" id="chatForm">
-      <input id="txt" autocomplete="off" autofocus="on" oninput="isTyping()" placeholder="type your message here..." /><button onclick="saveMessage()">Send</button>
+      
+      <input id="txt" autocomplete="off" autofocus="on" placeholder="type your message here..." /><button onclick="saveMessage(username)">Send</button>
     </form>
     <script>
             var socket = io.connect('https://vermieten.herokuapp.com');
@@ -32,15 +49,8 @@
             // append the chat text message
             socket.on('chat_message', function(msg){
 
-              
-                $('#messages').append($('<li>').html(msg));
-
+              $('#messages').append($('<li>').html(msg));
             });
-            // append text if someone is online
-            socket.on('is_online', function(username) {
-                $('#messages').append($('<li>').html(username));
-            });
-            // ask username
             var username = prompt('Please tell me your name');
             socket.emit('username', username);
     </script>

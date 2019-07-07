@@ -6,12 +6,11 @@ class Tenant{
     this.date = date;
   }
 }
-function saveMessage(){
+function saveMessage(name){
   var txt = document.getElementById('txt').value
-  firebase.database().ref('Forum/').set({
+  firebase.database().ref('Forum/' + name).set({
     Message:txt
   });
-  window.alert("Successfully added");
 }
 
 function addTenant() {
